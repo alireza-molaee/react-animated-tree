@@ -15,7 +15,7 @@ const styles = {
   toggle: {
     width: '1em',
     height: '1em',
-    marginRight: 10,
+    marginLeft: 10,
     cursor: 'pointer',
     verticalAlign: 'middle',
   },
@@ -27,9 +27,9 @@ const styles = {
   },
   contents: {
     willChange: 'transform, opacity, height',
-    marginLeft: 6,
-    padding: '4px 0px 0px 14px',
-    borderLeft: '1px dashed rgba(255,255,255,0.4)',
+    marginRight: 6,
+    padding: '4px 14px 0px 0px',
+    borderRight: '1px dashed rgba(0, 0, 0, 0.4)',
   },
 }
 
@@ -87,7 +87,7 @@ export default class Tree extends React.PureComponent {
           style={{ ...styles.toggle, opacity: children ? 1 : 0.3 }}
           onClick={this.toggle}
         />
-        <span style={{ ...styles.type, marginRight: type ? 10 : 0 }}>
+        <span style={{ ...styles.type, marginLeft: type ? 10 : 0 }}>
           {type}
         </span>
         {canHide && (
